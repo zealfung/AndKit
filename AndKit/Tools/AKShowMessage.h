@@ -30,6 +30,14 @@ typedef NS_ENUM(NSInteger, AKToastShowPosition) {
 ///@param position 显示位置
 ///@param duration 持续时间
 + (void)showToast:(NSString *)message inView:(UIView *)view position:(AKToastShowPosition)position duration:(CGFloat)duration;
+///显示带按钮的弹窗
+///@param message 要显示的文案
++ (void)showPopup:(NSString *)message;
+///显示带按钮的弹窗
+///@param message 要显示的文案
+///@param title 标题
+///@param cancelButton 取消按钮
++ (void)showPopup:(nullable NSString *)message title:(nullable NSString *)title cancelButton:(nullable NSString *)cancelButton;
 
 @end
 

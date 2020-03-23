@@ -108,4 +108,21 @@ static UIView *globalToastView = nil;
     });
 }
 
++ (void)showPopup:(NSString *)message {
+    [AKShowMessage showPopup:nil title:message cancelButton:nil];
+}
+
++ (void)showPopup:(nullable NSString *)message title:(nullable NSString *)title cancelButton:(nullable NSString *)cancelButton {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    NSString *cancelTitle = @"OK";
+    if (cancelButton.length > 0) {
+        cancelTitle = cancelButton;
+    }
+    UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    [alertController addAction:actionCancel];
+    
+}
+
 @end
