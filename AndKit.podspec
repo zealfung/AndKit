@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-       You can find some common functions
+       AndKit is maintain by Andwho Inc, you can find some common functions from AndKit, it can help you develop your projects quickly.
                    DESC
 
   spec.homepage     = "https://github.com/zealfung/AndKit"
