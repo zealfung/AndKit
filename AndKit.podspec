@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
        AndKit is maintain by Andwho Inc, you can find some common functions from AndKit, it can help you develop your projects quickly.
                    DESC
 
-  spec.homepage     = "https://github.com/zealfung/AndKit/README.md"
+  spec.homepage     = "https://github.com/zealfung/AndKit/blob/master/README.md"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
