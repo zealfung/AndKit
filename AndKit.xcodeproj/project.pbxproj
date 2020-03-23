@@ -16,12 +16,14 @@
 		EAEA7B0C242835F900B14D00 /* AKTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKTools.h; sourceTree = "<group>"; };
 		EAEA7B0F2428365900B14D00 /* AndKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AndKit.h; sourceTree = "<group>"; };
 		EAEA7CEF242860AB00B14D00 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EAEA7CF02428653000B14D00 /* AndKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AndKit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		EAEA7AF62427C86200B14D00 = {
 			isa = PBXGroup;
 			children = (
+				EAEA7CF02428653000B14D00 /* AndKit.podspec */,
 				EAEA7CEF242860AB00B14D00 /* README.md */,
 				EAEA7AFD2427C86200B14D00 /* AndKit */,
 			);
