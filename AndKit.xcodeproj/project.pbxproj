@@ -1,0 +1,174 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EAEA7B082427CB3B00B14D00 /* AKShowMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEA7B072427CB3B00B14D00 /* AKShowMessage.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EAEA7B062427CB3B00B14D00 /* AKShowMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKShowMessage.h; sourceTree = "<group>"; };
+		EAEA7B072427CB3B00B14D00 /* AKShowMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AKShowMessage.m; sourceTree = "<group>"; };
+		EAEA7B0C242835F900B14D00 /* AKTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKTools.h; sourceTree = "<group>"; };
+		EAEA7B0F2428365900B14D00 /* AndKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AndKit.h; sourceTree = "<group>"; };
+		EAEA7CEF242860AB00B14D00 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		EAEA7AF62427C86200B14D00 = {
+			isa = PBXGroup;
+			children = (
+				EAEA7CEF242860AB00B14D00 /* README.md */,
+				EAEA7AFD2427C86200B14D00 /* AndKit */,
+			);
+			sourceTree = "<group>";
+		};
+		EAEA7AFD2427C86200B14D00 /* AndKit */ = {
+			isa = PBXGroup;
+			children = (
+				EAEA7B0F2428365900B14D00 /* AndKit.h */,
+				EAEA7B052427CAF600B14D00 /* Tools */,
+			);
+			path = AndKit;
+			sourceTree = "<group>";
+		};
+		EAEA7B052427CAF600B14D00 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				EAEA7B0C242835F900B14D00 /* AKTools.h */,
+				EAEA7B062427CB3B00B14D00 /* AKShowMessage.h */,
+				EAEA7B072427CB3B00B14D00 /* AKShowMessage.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAEA7AFC2427C86200B14D00 /* AndKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAEA7B022427C86200B14D00 /* Build configuration list for PBXNativeTarget "AndKit" */;
+			buildPhases = (
+				EAEA7AFB2427C86200B14D00 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AndKit;
+			productName = AndKit;
+			productType = "com.apple.product-type.metal-library";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAEA7AF72427C86200B14D00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AK;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Andwho;
+				TargetAttributes = {
+					EAEA7AFC2427C86200B14D00 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = EAEA7AFA2427C86200B14D00 /* Build configuration list for PBXProject "AndKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAEA7AF62427C86200B14D00;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAEA7AFC2427C86200B14D00 /* AndKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAEA7AFB2427C86200B14D00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAEA7B082427CB3B00B14D00 /* AKShowMessage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EAEA7B002427C86200B14D00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EAEA7B012427C86200B14D00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		EAEA7B032427C86200B14D00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7BX9X6PV87;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EAEA7B042427C86200B14D00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7BX9X6PV87;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAEA7AFA2427C86200B14D00 /* Build configuration list for PBXProject "AndKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAEA7B002427C86200B14D00 /* Debug */,
+				EAEA7B012427C86200B14D00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAEA7B022427C86200B14D00 /* Build configuration list for PBXNativeTarget "AndKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAEA7B032427C86200B14D00 /* Debug */,
+				EAEA7B042427C86200B14D00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAEA7AF72427C86200B14D00 /* Project object */;
+}
