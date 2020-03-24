@@ -13,8 +13,8 @@ static UIView *globalToastView = nil;
 @implementation AKShowMessage
 
 + (UIView *)getRootView {
-    UIApplication *application = [UIApplication sharedApplication];
-    return application.keyWindow;
+    UIWindow *currentwindow = [[UIApplication sharedApplication] delegate].window;
+    return currentwindow;
 }
 
 + (void)showToast:(NSString *)message {
@@ -22,7 +22,7 @@ static UIView *globalToastView = nil;
 }
 
 + (void)showToast:(NSString *)message inView:(UIView *)view {
-    [AKShowMessage showToast:message inView:view position:AKToastShowPositionDefault duration:5.0];
+    [AKShowMessage showToast:message inView:view position:AKToastShowPositionDefault duration:3.5];
 }
 
 + (void)showToast:(NSString *)message inView:(UIView *)view position:(AKToastShowPosition)position duration:(CGFloat)duration {
@@ -109,10 +109,12 @@ static UIView *globalToastView = nil;
 }
 
 + (void)showPopup:(NSString *)message {
-    [AKShowMessage showPopup:nil title:message cancelButton:nil];
+    [AKShowMessage showPopup:nil title:message cancelButton:nil moreButtons:nil moreButtonsClickedIndex:^(NSInteger index) {
+        
+    }];
 }
 
-+ (void)showPopup:(nullable NSString *)message title:(nullable NSString *)title cancelButton:(nullable NSString *)cancelButton {
++ (void)showPopup:(nullable NSString *)message title:(nullable NSString *)title cancelButton:(nullable NSString *)cancelButton moreButtons:(nullable NSArray<NSString *> *)moreButtons moreButtonsClickedIndex:(nonnull void (^)(NSInteger index))handler {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
     NSString *cancelTitle = @"OK";
@@ -123,6 +125,45 @@ static UIView *globalToastView = nil;
     }];
     [alertController addAction:actionCancel];
     
+    if (moreButtons.count > 0) {
+        for (NSInteger i = 0; i < moreButtons.count; i++) {
+            UIAlertAction *actionItem = [UIAlertAction actionWithTitle:moreButtons[i] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                if (handler) {
+                    handler(i);
+                }
+            }];
+            [alertController addAction:actionItem];
+        }
+    }
+    [[AKShowMessage getTopController] presentViewController:alertController animated: YES completion: nil];
+}
+
++ (__kindof UIViewController *)getTopController {
+    UIWindow *currentwindow = [[UIApplication sharedApplication] delegate].window;
+    return [self topViewControllerWithRootViewController:currentwindow.rootViewController];
+}
+
++ (__kindof UIViewController *)topViewControllerWithRootViewController:(UIViewController *)rootViewController {
+    
+    if ([rootViewController isKindOfClass:[UITabBarController class]]) {
+        
+        UITabBarController *tabBarController = (UITabBarController *)rootViewController;
+        return [self topViewControllerWithRootViewController:tabBarController.selectedViewController];
+        
+    } else if ([rootViewController isKindOfClass:[UINavigationController class]]) {
+        
+        UINavigationController *nav = (UINavigationController *)rootViewController;
+        return [self topViewControllerWithRootViewController:nav.visibleViewController];
+        
+    } else if (rootViewController.presentedViewController) {
+        
+        UIViewController *presentedViewController = rootViewController.presentedViewController;
+        return [self topViewControllerWithRootViewController:presentedViewController];
+        
+    } else {
+        
+        return rootViewController;
+    }
 }
 
 @end

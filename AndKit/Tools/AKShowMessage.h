@@ -37,7 +37,9 @@ typedef NS_ENUM(NSInteger, AKToastShowPosition) {
 ///@param message 要显示的文案
 ///@param title 标题
 ///@param cancelButton 取消按钮
-+ (void)showPopup:(nullable NSString *)message title:(nullable NSString *)title cancelButton:(nullable NSString *)cancelButton;
+///@param moreButtons 更多按钮
+///@param handler更多按钮点击回调
++ (void)showPopup:(nullable NSString *)message title:(nullable NSString *)title cancelButton:(nullable NSString *)cancelButton moreButtons:(nullable NSArray<NSString *> *)moreButtons moreButtonsClickedIndex:(void (^) (NSInteger index))handler;
 
 @end
 
